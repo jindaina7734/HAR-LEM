@@ -1,2 +1,4 @@
 # HAR-LEM
 Enhanced Human Action Recognition from Synthetic UAVs Data Using Landmark Extraction and Mamba-based Model
+
+We propose a new experiment for implementation of human skeleton recognition using Mamba, a powerful model structure, and MediaPipe, a versatile framework for building multi-model applied machine learning pipelines. The integration of Mamba’s computational efficiency with MediaPipe’s advanced pose estimation algorithms allows for UAVs and accurate human skeleton recognition. The proposed system captures video data, processes it through Mamba for initial computations, and applies MediaPipe’s pose estimation to identify and track skeletal keypoints. Throughout experimentations, we demonstrate the effectiveness of our model in using MediaPipe and Mamba in extracting human keypoints and provide a new approach in analyzing human action recognition.
