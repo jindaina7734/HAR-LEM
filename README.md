@@ -1,4 +1,4 @@
-# HARLEM: Human Action Recognition via Automated RoI Tracking and Skeletal Feature Extraction
+# Enhanced Human Action Recognition from Synthetic UAVs Data Using Landmark Extraction and Mamba-based Model
 
 ## Overview
 HARLEM is a robust, end-to-end Human Action Recognition (HAR) pipeline optimized for in-the-wild video data. This repository contains the official implementation of our research, which introduces a three-stage architecture: automated subject tracking and centralization, spatiotemporal skeletal landmark extraction, and deep sequence classification.
@@ -80,7 +80,7 @@ If you find this codebase or our research methodology helpful in your work, plea
 
 ```bibtex
 @inproceedings{harlem2025,
-  title={Human Action Recognition via Automated RoI Tracking and Skeletal Feature Extraction},
+  title={Enhanced Human Action Recognition from Synthetic UAVs Data Using Landmark Extraction and Mamba-based Model},
   author={Tri, N. Q. and Anh, L. H. and Vu, L. Q. and Khoa, T. Q. and Hung, P. D.},
   booktitle={Proceedings of the International Symposium on Integrated Uncertainty in Knowledge Modelling and Decision Making (IUKM)},
   year={2025}
