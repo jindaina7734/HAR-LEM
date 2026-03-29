@@ -64,17 +64,13 @@ The final classification is performed using a PyTorch-based deep learning archit
 ## Experimental Results
 
 <p align="center">
-<img width="800" alt="Table Comparison" src="https://github.com/user-attachments/assets/3e94e30a-7ab1-43d6-a357-13537baba0b2" />
-
-
-<i>Table 1. Comparison of our method and baselines on the RoCoG-v2 dataset.</i>
+  <img width="800" alt="Table Comparison" src="https://github.com/user-attachments/assets/3e94e30a-7ab1-43d6-a357-13537baba0b2" />
+  <i>Table 1. Comparison of our method and baselines on the RoCoG-v2 dataset.</i>
 </p>
 
 <p align="center">
-<img width="600" alt="Accuracy curve" src="https://github.com/user-attachments/assets/a277a04f-4953-4e6d-b452-9cb2d76b3e5a" />
-
-
-<i>Fig 5. Accuracy curve over training steps (Peak test accuracy: 57.59%).</i>
+  <img width="600" alt="Accuracy curve" src="https://github.com/user-attachments/assets/a277a04f-4953-4e6d-b452-9cb2d76b3e5a" />
+  <i>Fig 5. Accuracy curve over training steps (Peak test accuracy: 57.59%).</i>
 </p>
 
 ## Citation
