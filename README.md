@@ -1,9 +1,14 @@
 # Enhanced Human Action Recognition from Synthetic UAVs Data Using Landmark Extraction and Mamba-based Model
 
+---
+
 ## Overview
+
 HARLEM is a robust, end-to-end Human Action Recognition (HAR) pipeline optimized for in-the-wild video data. This repository contains the official implementation of our research, which introduces a three-stage architecture: automated subject tracking and centralization, spatiotemporal skeletal landmark extraction, and deep sequence classification.
 
 This work was officially accepted and published in the proceedings of the International Symposium on Integrated Uncertainty in Knowledge Modelling and Decision Making (IUKM 2025).
+
+---
 
 ## Pipeline Architecture
 
@@ -12,6 +17,8 @@ This work was officially accepted and published in the proceedings of the Intern
 </p>
 
 The system is modularized into three core components, corresponding to the provided implementation files:
+
+<br>
 
 ### 1. Automated Zooming and Centralization (`Auto_zooming.ipynb`)
 
@@ -22,6 +29,7 @@ The system is modularized into three core components, corresponding to the provi
 </p>
 
 To mitigate background noise, camera jitter, and scale variations, this module utilizes a YOLOv5-based 2-pass processing algorithm.
+
 * **Pass 1:** Scans the entire temporal sequence to determine the maximum global bounding box dimensions occupied by the subject.
 * **Pass 2:** Tracks the subject using a custom Moving Average filter (`window_size = 5`) to smooth spatial coordinates. The Region of Interest (RoI) is then dynamically cropped and resized to a fixed `480x800` resolution, ensuring aspect ratio consistency without mechanical viewport jitter.
 
@@ -31,7 +39,10 @@ To mitigate background noise, camera jitter, and scale variations, this module u
   <i>Fig 2. Before & After Zooming process.</i>
 </p>
 
+<br>
+
 ### 2. Skeletal Landmark Extraction (`landmarks_extraction.ipynb`)
+
 Operating on the stabilized, centralized video output from the previous stage, this module extracts structural human pose data. By converting raw RGB pixel data into structured sequences of spatiotemporal skeletal joints and angles, the system drastically reduces computational dimensionality while preserving critical motion dynamics required for action modeling.
 
 <p align="center">
@@ -39,6 +50,8 @@ Operating on the stabilized, centralized video output from the previous stage, t
   <br>
   <i>Fig 3. Skeleton-based human keypoints.</i>
 </p>
+
+<br>
 
 ### 3. Action Recognition Modeling (`HAR-LEM.ipynb`)
 
@@ -49,8 +62,11 @@ Operating on the stabilized, centralized video output from the previous stage, t
 </p>
 
 The final classification is performed using a PyTorch-based deep learning architecture trained entirely on the extracted skeletal sequences.
+
 * Integrated with **Weights & Biases (WandB)** for real-time tracking of training metrics (loss, accuracy).
 * Implements dynamic checkpointing to automatically preserve optimal model weights based on validation accuracy thresholds.
+
+---
 
 ## Repository Structure
 ```text
@@ -82,7 +98,9 @@ If you find this codebase or our research methodology helpful in your work, plea
 @inproceedings{harlem2025,
   title={Enhanced Human Action Recognition from Synthetic UAVs Data Using Landmark Extraction and Mamba-based Model},
   author={Tri, N. Q. and Anh, L. H. and Vu, L. Q. and Khoa, T. Q. and Hung, P. D.},
-  booktitle={Proceedings of the International Symposium on Integrated Uncertainty in Knowledge Modelling and Decision Making (IUKM)},
-  year={2025}
+  booktitle={Integrated Uncertainty in Knowledge Modelling and Decision Making: 11th International Symposium, IUKM 2025, Ho Chi Minh City, Vietnam, March 17--19, 2025, Proceedings, Part I},
+  year={2025},
+  publisher={Springer Nature Singapore},
+  doi={10.1007/978-981-96-4606-7}
 }
 ```
